@@ -1,0 +1,805 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml" lang="en">
+
+<head id="Head1">
+  <title>
+    Always Heal
+  </title>
+  <meta id="MetaViewport" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+  <meta name="keywords" content=" Always Heal " />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src='js/bootstrap.min.js?ver=1.5' type='text/javascript'></script>
+  <link href='css/bootstrap.min.css?ver=1.92' rel='stylesheet' media='all' />
+
+
+  <style>
+    body,
+    html {
+      overflow-x: hidden;
+    }
+    @font-face {
+  font-family: coopper;
+  src: url(fonts\COOPBL.TTF);
+}
+@font-face {
+  font-family: coopper;
+  src: url(fonts\COOPBL.woff);
+}
+@font-face {
+  font-family: coopper;
+  src: url(fonts\COOPBL.woff2);
+}
+/*body{font-family: coopper;}*/
+    .overlay {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: rgb(0, 0, 0);
+      background-color: #fff;
+      overflow-x: hidden;
+      transition: 0.5s;
+    }
+
+    .overlay-content {
+      position: relative;
+      top: 10%;
+      width: 100%;
+
+      margin-top: 30px;
+      padding-left: 22px;
+    }
+
+    .overlay a {
+      padding: 8px;
+      text-decoration: none;
+      font-size: 36px;
+      color: #333;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .overlay a:hover,
+    .overlay a:focus {
+      color: #f1f1f1;
+    }
+
+    .overlay .closebtn {
+      position: absolute;
+      top: 20px;
+      right: 45px;
+      font-size: 60px;
+    }
+
+    @media screen and (max-height: 450px) {
+      .overlay a {
+        font-size: 20px
+      }
+
+      .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;color:#333;
+      }
+    }
+  </style>
+
+  <style>
+    body,body ul li{font-size:2.6vh;}
+    h4, .h4 {
+    font-size: 2.5vh;
+}
+    #ppfpro{min-height:98vh;}
+    a:hover {
+      text-decoration: none;
+    }
+
+    .h4 span a {
+      color: #333;
+      padding-right: 2vh;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 6vh;
+      margin: 8vh 0;
+      color: #666;
+    }
+
+    .footer {
+      min-height: 25vh;
+      background-color: #ff1200;
+      color: #fff;
+      padding-top: 10vh;
+    }
+
+    .bg_black h2 {
+      color: #fff;
+      font-size: 8vh;
+    }
+
+    .logo {
+      width: 60%;
+      padding-bottom: 1vh;
+      position: relative;
+    }
+
+    .top_header {
+      min-height: 10vh;
+      padding: 2vh 0;
+    }
+
+    .h3 {
+      font-weight: 600;
+    }
+
+    .pad-bottom {
+      padding-bottom: 4vh;
+    }
+
+    .pad-top {
+      padding-top: 4vh
+    }
+
+    .dealer {
+      padding-top: 2vh;
+    }
+
+    .centerbgtext {
+      height: 100%;
+      text-align: center;
+      padding-top: 15vh;
+      font-size: 5vh;
+      color: #fff;
+      text-transform: uppercase;
+      background-color: #00000087;
+    }
+
+    p {
+      line-height: 1.8;
+    }
+
+    .acc {
+      margin-bottom: 4vh;
+    }
+
+    .acc1 {
+      margin-bottom: 8vh;
+    }
+
+    @media screen and (max-width:767px) {
+
+      .logo {
+        width: 25%;
+      }
+
+      .mobnav {
+        width: 35%;
+
+      }
+
+      .slidergif {
+        padding-top: 18vh;
+      }
+.protectionstart.acc1{
+  padding-top:28vh;
+}.pad-top {
+    padding-top: 0vh;
+    margin-bottom: 0vh;
+}
+      .top_header {
+        min-height: 8vh;
+        padding: 2vh 0;
+        top: 0;
+        position: absolute;
+        
+        width: 100%;
+      }
+
+      .benefits {
+        margin-top: 24vh;
+      }
+
+      .top_header .h3 {
+        padding-top: 2rem;
+        font-size: 20px;
+        text-align: center;
+      }
+
+      .plike {
+        margin-top: 0vh;
+      }
+
+      .centerbgtext {
+        font-size: 3vh;
+      }
+
+      .col-md-12.topsec {
+        display: contents;
+      }
+
+      h2 {
+
+        font-size: 4vh;
+      }
+h2.plike{
+  font-size: 2.5vh;
+}
+.acchead{
+  font-size: 2vh;
+}
+.centerbgtext {
+ 
+    padding-top: 20vh;
+}
+      .footer {
+        min-height: 25vh;
+        background-color: #ff1200;
+        color: #fff;
+        padding-top: 10vh;
+        padding-bottom: 10vh;
+      }
+
+      p,
+      ul li,
+      div {
+        font-size: 18px;
+      }
+
+      #ppfpro {
+        padding-top: 1vh;
+      }
+
+      .darkHeader {
+        position: fixed;
+        height: 60px;
+        background-color: #fff;
+        z-index: 99;
+        top: 0;
+        width: 100%;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      }
+
+      .darkHeader .logotop {
+        
+        padding-top: 10px;
+      }
+
+      .darkHeader span.openbtn {
+        
+        padding-top: 3.5%;
+        position: relative;
+      }
+
+      .overlay img {
+        padding: 15px;
+        padding-top: 46px;
+      }
+
+      .container.topsec {
+        padding-left: 0;
+      }
+
+      .acc1 {
+        padding-top: 5vh;
+      }
+        body{
+          /*font-family: coopper;*/
+        }
+      
+    }
+
+    .knowmore {
+      width: fit-content;
+      text-align: center;
+      margin: 0 auto;
+      padding: 1vh 2vh;
+
+      border: 2px solid #fff;
+      border-radius: 50px;
+      margin-top: 2vh;
+    }
+
+    .knowmore:hover {
+      background-color: #ff1200;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="col-md-12 topsec">
+    <div class="top_header">
+
+
+      <div id="myNavStart" class="col-md-2">
+        <img class="logo logotop" src="media/logo.png?ver=1.14" style="" />
+        <div id="myNav" class="overlay">
+          <img class="logo mobnav" src="media/logo.png?ver=1.14"> <a href="javascript:void(0)" class="closebtn"
+            onclick="closeNav()">&times;</a>
+          <div class="overlay-content">
+            <a href="#ppfpro">PPF PRO</a>
+            <a href="#ppfextreme">PPF EXTREME</a>
+            <a href="#work">Our Work</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </div>
+
+
+        <span class="hidden-lg hidden-md openbtn" style="font-size:30px;cursor:pointer;float: right;"
+          onclick="openNav()">&#9776; </span>
+
+        <script>
+          function openNav() {
+            document.getElementById("myNav").style.width = "100%";
+          }
+
+          function closeNav() {
+            document.getElementById("myNav").style.width = "0%";
+          }
+          $(".overlay-content a").click(function () {
+            document.getElementById("myNav").style.width = "0%";
+          });
+        </script>
+
+        <script>
+          $(window).scroll(function () {
+            var scroll = $(window).scrollTop();
+            if (scroll > 10) {
+              $("#myNavStart").addClass("darkHeader");
+            }
+            if (scroll < 10) {
+              $("#myNavStart").removeClass("darkHeader");
+            }
+          });
+        </script>
+      </div>
+      <div class="col-md-10 text-right">
+        <div class="h4 dealer" style="">
+          <Span><a href="#">FIND A DEALERSHIP</a></Span><span> <a href="#">BROCHURE</a></span>
+        </div>
+
+
+      </div>
+
+    </div>
+  </div>
+
+  <div class="row1">
+
+
+    <div class="clearfix"></div>
+    <div class="container protectionstart acc1">
+      <h2 class="plike" style="margin-bottom: 1vh;">PROTECTION LIKE NO OTHER</h2>
+      <div class="h3 text-center acchead acc" data-aos="fade-up" data-aos-duration="2000">
+        ACCELERATE TO THE FUTURE OF PPF PROTECTION
+      </div>
+      <div class="col-md-6 acc" data-aos="fade-right" data-aos-duration="2000">
+        <a href="#ppfpro">
+          <div class="bkimage" style="background-image: url(media/ppfpro.webp);background-size: cover;height:370px">
+            <div class="centerbgtext">PPF PRO<p class="knowmore" style="font-size: small;">Know More</p>
+            </div>
+
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-6 acc" data-aos="fade-left" data-aos-duration="2000">
+        <a href="#ppfextreme">
+          <div class="bkimage" style="background-image: url(media/ppfextreme.jpg);background-size: cover;height:370px;">
+            <div class="centerbgtext">PPF Extreme<p class="knowmore" style="font-size: small;">Know More</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+    </div>
+
+    <div id="ppfpro" class="" style="background-color:#eee; ">
+      <h2 class="pad-top" data-aos="fade-down" data-aos-duration="2000">PPF PRO</h2>
+      <div class="col-md-12 ">
+        <div class="col-md-6 acc1" data-aos="fade-right" data-aos-duration="2000">
+          <h4> WHY INVEST IN PPF PROTECTION</h4>
+          <p>
+            We all love that flawless showroom shine of a brand new paint finish. But sadly, it does not
+            last the life of a vehicle. When a vehicle's finish looks dull, scratched up and worn both pride
+            and resale value are lost. Today's automotive industry has adapted new environmental friendly water based
+            paints that are much softer and scratch easily. Thus, paint protection is
+            needed now more than ever before.
+
+          </p><br />
+          <h4>PREVENTION IS BETTER THAN A CURE</h4>
+          <p>
+            Probably the most important aspect of owning a vehicle is how does it hold its resale value
+            according to its condition after 3-4 years. Statistically a vehicle loses around 40% of its value
+            over the first 3 years of its life. 9H-LDC PRO is a high quality durable paint protection that
+            will lock in that showroom shine and absorb the damage that would normally be caused
+            directly to the paint retaining its original shine and value longer.
+          </p>
+        </div>
+        <div class="col-md-6" data-aos="fade-left" data-aos-duration="2000">
+          <img class="img-responsive acc1" src="media/1.png" />
+        </div>
+      </div>
+    </div>
+    <div id="ppfextreme" class="clearfix"></div>
+    <div class="" style=" " data-aos="fade-up" data-aos-duration="2000">
+      <h2 class="pad-top1">PPF EXTREME</h2>
+      <div class="col-md-12">
+        <div class="col-md-6" data-aos="fade-right" data-aos-duration="2000">
+          <img class="img-responsive acc1" src="media/6.png" />
+        </div>
+        <div class="col-md-6 acc1" data-aos="fade-left" data-aos-duration="2000">
+
+
+
+          <p> <b> Liquid Diamond Coat</b>
+
+          </p>
+          <div>
+            <ul>
+              <li>
+                Permanent chemical bond </li>
+              <li>Extreme scratch resistance </li>
+              <li>Extreme beading/Self cleaning effect </li>
+              <li>UV, chemical & thermal resistance </li>
+              <li>Enhances Color Depth & adds highly reflective shine </li>
+              <li>Highly concentrated 7-8 micron thick formula </li>
+              <li>Limited availability-Strictly professional use only </li>
+              <li>Ultra Durable- Lifetime warranty= Best Protection money can buy ! </li>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+      <div class="clearfix"></div>
+      <div class="col-md-12 " data-aos="fade-up" data-aos-duration="2000">
+        <div class="col-md-12 acc1">
+
+          <div class="col-md-6 pad-top acc1">
+            <h3 class="hidden-xs">&nbsp;</h3>
+            <p> <b>TRUE 9H HARDNESS :</b> Extreme resistance against swirls and scratches</p>
+            <p> <b>THERMAL RESISTANCE :</b> From pH2 to pH13, acid rain and bird droppings </p>
+            <p> <b>WEATHER RESISTANCE :</b> Withstands Temp up to -45 to 650 degrees Celsius </p>
+            <p> <b>ULTRA HIGH GLOSS SHINE :</b> From UV fading, oxidation and salt water corrosion </p>
+            <p> <b>WATER PROOF FINISH :</b> Enhances colour depth & adds highly reflective shine</p>
+            <p> <b>SELF CLEANING EFFECT :</b> Extreme beading effect, water simply sheets off</p>
+            <p> <b>ANTI CALCIUM EFFECT :</b> Ultra slick surface repels dirt, rain, snow and mud</p>
+            <p> <b>CHEMICAL RESISTANCE :</b> Hard water etching & mineral stains clean easily</p>
+            <p> <b>LOW MAINTENANCE :</b> Bug splatter, tree sap and road grime clean easily</p>
+            <p> <b>EASY CLEAN SURFACE :</b> Coated vehicle requires one litre of water to clean</p>
+            <p> <b>ENVIRONMENT FRIENDLY : </b>No additional paint protection or waxing required
+            </p>
+            <p>
+            <h2></h2>
+            </p>
+          </div>
+
+
+          <div class="col-md-6 benefits">
+            <div style="width: 100%;height: 100%; transform: rotate(-90deg);">
+              <div class=""
+                style="opacity: 1.0;  display: flex;     color: #e0d9d9; font-size: 8vh; font-weight: 900;  box-sizing: border-box;   flex-direction: column; justify-content: flex-start; width: 100%; height: 100%;">
+                BENEFITS
+              </div>
+            </div>
+            <img class="img-responsive" src="media/benefits.jpg" />
+
+          </div>
+
+        </div>
+      </div>
+      <div class="clearfix"></div>
+
+    </div>
+
+    <div class="bg_black1 acc1" style="background-color:#eee;">
+
+      <!--<h2 class="pad-top">PAINT PROTECTION</h2>-->
+      <div id="work" class="col-md-12">
+        <h2 data-aos="fade-up" data-aos-duration="2000">COMPLETE SURFACE PROTECTION </h2>
+        <div class="col-md-12 acc1">
+          <div class="col-md-5" data-aos="fade-down" data-aos-duration="2000"> <img class="img-responsive acc1"
+              src="media/4.png" /></div>
+          <div class="col-md-7" data-aos="fade-up" data-aos-duration="2000">
+            <h4>ULTIMATE WHEEL PROTECTION</h4>
+
+            <p>This ultra durable super hydrophobic ceramic coating is based on original LDC formula but it is specially
+              formulated to withstand extreme heat. Wheel pro-tech's exceptional formula makes dirt, water, & break dust
+              much easier to clean & resists salt corrosion and pitting. </p>
+            <ul>
+              <li>
+                Repels dirt, water, snow & mud
+              </li>
+              <li>
+                Easy clean surface reduces maintenance Protects from corrosion and brake dust Protects wheels from
+                pitting and chipping
+              </li>
+              <li>
+                Ultimate water and stain Repellant
+              </li>
+              <li>
+                108 degree hydrophobic effect Ultra durable, lasts for years
+              </li>
+              <li>
+                Makes surface oil, water and stain repellant UV resistant-Protects from fading & cracking Protects from
+                dye transfer, stains & spills
+              </li>
+              <li>Abrasion resistant, will not wear off</li>
+
+              <li>Ultra durable, Lasts for up to 5 years</li>
+
+              <li>Fabric Pro-Tech</li>
+
+              <li>Safe for chrome, alloys or painted wheels</li>
+              <li>Will not add shine to wheels with matte finishes</li>
+            </ul>
+
+
+
+
+          </div>
+        </div>
+
+        <div class="col-md-12 acc1" data-aos="fade-right" data-aos-duration="2000">
+          <div class="col-md-7">
+            <h4>LEATHER PRO-TECH
+            </h4>
+            <p>Ultimate water and stain Repellant
+            <ul>
+              <li>
+                108 degree hydrophobic effect Ultra durable, lasts for years
+              </li>
+
+              <li>Makes surface oil, water and stain repellant UV resistant-Protects from fading & cracking Protects
+                from dye transfer, stains & spills</li>
+              <li>Abrasion resistant, will not wear off</li>
+            </ul>
+            </p>
+
+          </div>
+          <div class="col-md-5"> <img class="img-responsive acc1" src="media/leatherpro.jpg" /></div>
+
+        </div>
+
+        <div class="col-md-12  acc1" data-aos="fade-left" data-aos-duration="2000">
+          <div class="col-md-5"> <img class="img-responsive acc1" src="media/glasssealer.jpg" /></div>
+          <div class="col-md-7">
+            <h4>PERMANENT GLASS SEALER</h4>
+
+            <p>This ultra durable super hydrophobic glass coating dramatically improves visibility while. driving in
+              extreme weather conditions </p>
+            <ul>
+              <li> Strengthens glass, reduces rock chips Repels water, mud, ice and snow Cuts night time glare by 35%
+                Reduces cleaning time</li>
+              <li> Improves night vision
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-12 acc1" data-aos="fade-right" data-aos-duration="2000">
+          <div class="col-md-6">
+            <h4>FRESH BUSINESS OWNER OR MANAGER</h4>
+
+            <p>
+              Ultimate water and stain Repellant </p>
+            <ul>
+              <li>148 degree Super hydrophobic effect</li>
+
+
+              <li>Protects from stains and spills</li>
+              <li>Makes surface oil, water and stain repellant</li>
+
+
+
+              <li>UV resistant- Protects from fading & cracking Will not change Fabric texture</li>
+              <li>Will not change Fabric texture</li>
+              <li>Abrasion resistant</li>
+            </ul>
+
+          </div>
+          <div class="col-md-4"> <img class="img-responsive acc1" src="media/3.png?ver=1.1" /></div>
+
+        </div>
+      </div>
+      <p>&nbsp;</p>
+      <div class="clearfix"></div>
+
+
+    </div>
+    <div class="container">
+      <div class="col-md-12" style="display:none;">
+        <div class="col-md-3">
+          <img class="img-responsive"
+            src="https://alwaysdrynewdelhi.com/wp-content/uploads/2023/01/Home-Ceramic-Coating.jpg" />
+        </div>
+        <div class="col-md-3">
+          <img class="img-responsive"
+            src="https://alwaysdrynewdelhi.com/wp-content/uploads/2023/01/Home-Ceramic-Coating.jpg" />
+        </div>
+        <div class="col-md-3">
+          <img class="img-responsive"
+            src="https://alwaysdrynewdelhi.com/wp-content/uploads/2023/01/Home-Ceramic-Coating.jpg" />
+        </div>
+        <div class="col-md-3">
+          <img class="img-responsive"
+            src="https://alwaysdrynewdelhi.com/wp-content/uploads/2023/01/Home-Ceramic-Coating.jpg" />
+        </div>
+      </div>
+      <div>
+        <h3 class="text-center">MORE THAN JUST A PROMISE OF PROTECTION</h3>
+        <h2 style="margin-top: 0vh;">WE DELIVER RESULTS!</h2>
+      </div>
+    </div>
+
+
+    <div class="bg_black" style="background-color:#000000; color:#fff; display:none;">
+      <div class="container">
+        <h2>WE DO THE HARD WORK</h2>
+        <div class="col-md-4">
+          <img class="img-responsive"
+            src="https://alwaysdrynewdelhi.com/wp-content/uploads/2023/01/Home-Ceramic-Coating.jpg" />
+
+
+          <div>
+            <h3>RIVETING DESIGN</h3>
+
+            <p>Write a paragraph that talks about your company here. You can talk about your company's background,
+              history, mission, vision, or philosophy.</p>
+
+
+
+            <p>Anything that will introduce your brand's persona to your clients.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <img class="img-responsive"
+            src="https://alwaysdrynewdelhi.com/wp-content/uploads/2023/01/Home-Ceramic-Coating.jpg" />
+
+
+          <div>
+            <h3>RIVETING DESIGN</h3>
+
+            <p>Write a paragraph that talks about your company here. You can talk about your company's background,
+              history, mission, vision, or philosophy.</p>
+
+
+
+            <p>Anything that will introduce your brand's persona to your clients.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <img class="img-responsive"
+            src="https://alwaysdrynewdelhi.com/wp-content/uploads/2023/01/Home-Ceramic-Coating.jpg" />
+
+
+          <div>
+            <h3>RIVETING DESIGN</h3>
+
+            <p>Write a paragraph that talks about your company here. You can talk about your company's background,
+              history, mission, vision, or philosophy.</p>
+
+
+
+            <p>Anything that will introduce your brand's persona to your clients.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container" style="display:none;">
+      <div class="col-md-4">
+        <img class="img-responsive"
+          src="https://alwaysdrynewdelhi.com/wp-content/uploads/2023/01/Home-Ceramic-Coating.jpg" />
+      </div>
+      <div class="col-md-8">
+        <div class=".h3"> Our reason for being</div>
+
+        <h2> WE ELEVATE BRANDS,
+
+          REALIZING THE
+
+          FUTURE OF CREATIVITY</h2>
+      </div>
+    </div>
+    <div class="bg_black" style="background-color:#eee;display:none;">
+
+      <div class="container">
+
+
+        <h2 class="text-white1">
+          CLIENTS WE'VE ALREADY HELPED LEAVE A MARK
+        </h2>
+        <div class="col-md-3">
+          <img class="img-responsive"
+            src="https://alwaysdrynewdelhi.com/wp-content/uploads/2023/01/Home-Ceramic-Coating.jpg" />
+        </div>
+        <div class="col-md-3">
+          <img class="img-responsive"
+            src="https://alwaysdrynewdelhi.com/wp-content/uploads/2023/01/Home-Ceramic-Coating.jpg" />
+        </div>
+        <div class="col-md-3">
+          <img class="img-responsive"
+            src="https://alwaysdrynewdelhi.com/wp-content/uploads/2023/01/Home-Ceramic-Coating.jpg" />
+        </div>
+        <div class="col-md-3">
+          <img class="img-responsive"
+            src="https://alwaysdrynewdelhi.com/wp-content/uploads/2023/01/Home-Ceramic-Coating.jpg" />
+        </div>
+
+        <h2 class="text-center">WHAT WE OFFER </h2>
+
+
+        <div class="col-md-6">
+          <div class="col-md-4">
+            <img class="img-responsive"
+              src="https://alwaysdrynewdelhi.com/wp-content/uploads/2023/01/Home-Ceramic-Coating.jpg" />
+          </div>
+          <div class="col-md-8">
+            <h3>PROFESSIONALS YOU CAN COUNT ON</h3>
+            <p>Each vehicle coated by us is thoroughly inspected, coated and detailed to perfection by our PPF
+              protection experts. We treat your beloved ride like our own. We use only top quality premium products made
+              in USA. Rest assure you will enjoy your investment for years to come! At AlwaysDry technologies, we
+              believe in nothing but the best in quality, performance, customer service & most of all integrity of our
+              brand. </p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="col-md-4">
+            <img class="img-responsive"
+              src="https://alwaysdrynewdelhi.com/wp-content/uploads/2023/01/Home-Ceramic-Coating.jpg" />
+          </div>
+          <div class="col-md-8">
+            <h3>WORLD'S FASTEST GROWING 9H CERAMIC BRAND</h3>
+            <h4>TRIED, TESTED & TRUE</h4>
+            <p>
+              Our coatings are proudly made in USA and tested by an independent lab. With thousands of vehicles coated
+              worldwide, our products also have been tested and proven in real world in the most polluted and harshest
+              climates known to man. With presence in over 24 countries, We're the fastest growing paint protection
+              brand in the world. Be among the thousands of businesses and enthusiasts all
+              over the world that have trusted Always dry products!
+
+
+            </p>
+          </div>
+        </div>
+
+
+      </div>
+
+    </div>
+
+    <div id="contact" class="footer">
+      <div class="container">
+        <div class="col-md-4">
+          <p>Get in touch with Always Heal
+
+            Website: www.alwaysheal.com</p>
+
+        </div>
+        <div class="col-md-4">
+          <p><i class="fa fa-phone"></i> 123-456-7890<br />
+
+            <i class="fa fa-envelope"></i> contact@alwaysheal.com
+          </p>
+        </div>
+        <div class="col-md-4">
+          <i class="fa fa-map-marker"></i>
+          123 Anywhere Delhi 12345
+        </div>
+      </div>
+    </div>
+
+</body>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+</html>
